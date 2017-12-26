@@ -1,0 +1,48 @@
+box: wodby/alpine:3.7-1.1.1
+
+build:
+  box:
+    id: python:2-alpine
+    cmd: /bin/sh
+  steps:
+    - script:
+      name: build
+      code: |
+        pip install mkdocs mkdocs-material markdown==2.6.7 markdown-include pygments
+        apk add --update bash
+        mkdocs build
+
+release:
+  box:
+    id: nginx:alpine
+    cmd: /bin/sh
+  steps:
+    - script:
+      name: mv static files
+      code: |
+        rm -rf /usr/share/nginx/html/*
+        mkdir -p /usr/share/nginx/html/stacks/wordpress/docs
+        mv $WERCKER_SOURCE_DIR/site/* /usr/share/nginx/html/stacks/wordpress/docs
+    - internal/docker-push:
+      registry: https://registry.hub.docker.com/v2
+      username: $DOCKER_USERNAME
+      password: $DOCKER_PASSWORD
+      repository: wodby/wordpress-docs
+      tag: latest, $WERCKER_GIT_BRANCH
+      cmd: nginx -g 'daemon off;'
+
+deploy:
+  steps:
+    - script:
+      name: deployment
+      code: |
+        curl -sS \
+                -H "Content-type: application/json" \
+                -H "Authorization: token ${WODBY_API_TOKEN}" \
+                -X POST https://api.wodby.com/api/v2/bundles/deploy?org_id="${WODBY_ORG_UUID}"\&service_image=wodby/wordpress-docs:"${WERCKER_GIT_BRANCH}"\&cause="${WERCKER_GIT_COMMIT}"
+  after-steps:
+    - slack-notifier:
+      url: $SLACK_URL
+      channel: activity
+      username: wecker
+      branch: master

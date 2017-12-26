@@ -1,0 +1,96 @@
+site_name: WordPress stack documentation
+site_description: WordPress stack documentation
+site_author: Wodby, Inc.
+site_url: https://wodby.com/stacks/wordpress/docs
+
+repo_name: wodby/wordpress-docs
+repo_url: https://github.com/wodby/wordpress-docs
+
+copyright: Wodby, Inc.
+
+extra:
+  social:
+    - type: globe
+      link: https://wodby.com
+    - type: github-alt
+      link: https://github.com/wodby
+    - type: twitter
+      link: https://twitter.com/WodbyHQ
+
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  custom_dir: 'theme'
+
+extra_css: ["assets/wodby.css"]
+extra_javascript: []
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+pages:
+    - Home: index.md
+    - Backups: backups.md
+    - Cache control: cache-control.md
+    - Deployment: deployment.md
+    - Domains: domains.md
+    - Going live: going-live.md
+    - Import: import.md
+    - Instance types: instance-types.md
+    - Logs: logs.md
+    - Mail delivery: mail-delivery.md
+    - Multi site: multi-site.md
+    - WordPress config: wp-config.md
+    - Containers:
+      - Overview: containers/index.md
+      - Apache: containers/apache.md
+      - AthenaPDF: containers/athenapdf.md
+      - Blackfire: containers/blackfire.md
+      - Cron: containers/cron.md
+      - Nginx: containers/nginx.md
+      - Mailhog: containers/mailhog.md
+      - MariaDB: containers/mariadb.md
+      - OpenSMTPD: containers/opensmtpd.md
+      - PHP: containers/php.md
+      - PostgreSQL: containers/postgres.md
+      - Rsyslog: containers/rsyslog.md
+      - Redis: containers/redis.md
+      - SSH: containers/ssh.md
+      - Varnish: containers/varnish.md
+      - Webgrind: containers/webgrind.md
+    - Local environment:
+      - Overview: local/index.md
+      - Quick start: local/quick-start.md
+      - Domains: local/domains.md
+      - Docker for mac: local/docker-for-mac.md
+      - Import and export: local/import-export.md
+      - Multiple projects: local/multiple-projects.md
+      - Permissions issues: local/permissions.md
+      - Xdebug: local/xdebug.md
