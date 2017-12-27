@@ -1,4 +1,4 @@
-# WordPress settings
+# WordPress config
 
 ## wp-config.php
 

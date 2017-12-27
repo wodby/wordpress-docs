@@ -27,7 +27,7 @@ theme:
   custom_dir: 'theme'
 
 extra_css: ["assets/wodby.css"]
-extra_javascript: []
+extra_javascript: ["assets/intercom.js"]
 
 markdown_extensions:
   - markdown.extensions.admonition
