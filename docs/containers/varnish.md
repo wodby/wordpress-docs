@@ -5,4 +5,6 @@ You can configure Redis via environment variables that listed at https://github.
 Integration:
 
 1. Install and activate [Varnish Caching plugin](https://wordpress.org/plugins/vcaching)
-2. On plugin cache settings enable caching and set up cache TTL 
+2. On plugin cache settings configure as shown below:  
+
+![Varnish Caching plugin settings](/assets/wp-varnish-caching-plugin-settings.png)
