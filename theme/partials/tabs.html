@@ -1,0 +1,19 @@
+{% set class = "md-tabs" %}
+{% if page.ancestors | length > 0 %}
+{% set class = "md-tabs md-tabs--active" %}
+{% endif %}
+<nav class="{{ class }}" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      {% for nav_item in nav %}
+      {% include "partials/tabs-item.html" %}
+      {% endfor %}
+
+      <li class="md-tabs__item" style="float: right">
+        <span class="md-tabs__link md-tabs__link--active">
+          STACK VERSION: 5.0
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>

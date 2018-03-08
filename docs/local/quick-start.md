@@ -3,41 +3,34 @@
 !!! danger "Persistence of database data":
     You will lose MariaDB / PostgreSQL data if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist. 
 
-There 2 options how to use docker4wordpress – you can either run [vanilla](https://en.wikipedia.org/wiki/Vanilla_software) WordPress from the image or mount your own WordPress codebase:
+There are 2 options how to use docker4wordpress – you can either run [vanilla](https://en.wikipedia.org/wiki/Vanilla_software) WordPress from the image or mount your own WordPress codebase:
 
-## Option 1: Run Vanilla WordPress from Image (default)
+## Option 1: Run Vanilla WordPress from Image
 
-1. Download `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4wordpress/releases)
-2. Run containers: `docker-compose up -d` (it may take some time for them to initialize) 
-3. [Configure domains](domains.md) 
+1. Clone [docker4wordpress repository](https://github.com/wodby/docker4wordpress) and switch to the [latest stable tag](https://github.com/wodby/docker4wordpress/releases) or download/unpack the source code from the [latest release](https://github.com/wodby/docker4wordpress/releases)
+2. [Configure domains](domains.md)
+3. From project root directory run `docker-compose up -d` or `make up` to start containers 
 4. That's it! Proceed with WordPress installation at http://wp.docker.localhost:8000. Default database user, password and database name are all `wordpress`, database host is `mariadb`
-5. You can see status of your containers and their logs via portainer at http://portainer.wp.docker.localhost:8000
+5. You can see status of your containers and their logs via portainer: http://portainer.wp.docker.localhost:8000
 
 ## Option 2. Mount my WordPress Codebase
 
-1. Download `docker-compose.yml` file from the [latest stable release](https://github.com/wodby/docker4wordpress/releases) to your WordPress project root
-2. Replace php image from `wodby/wordpress` (PHP + vanilla WordPress) to `wodby/wordpress-php` (just PHP)
-3. Update _nginx/apache_ and _php_ volumes to `- ./:/var/www/html` to mount your codebase
-4. Ensure your wp-config.php has the same credentials as _mariadb_ service 
-5. Optional: [import existing database](import-export.md)
-7. Optional: uncomment lines in the compose file to run _redis_, _varnish_, _phpmyadmin (pma)_ 
-8. [Configure domains](domains.md)
-9. Run containers: `docker-compose up -d`
-10. That's it! Your WordPress website should be up and running at http://wp.docker.localhost:8000
-11. You can see status of your containers and their logs via portainer at http://portainer.wp.docker.localhost:8000
+1. Download `docker4wordpress.tar.gz` from the [latest stable release](https://github.com/wodby/docker4wordpress/releases) and unpack to your WordPress project root
+2. Ensure database credentials match in your `wp-config.php` and `.env` files 
+3. [Configure domains](domains.md)
+4. Optional: [import existing database](import-export.md)
+5. Optional: uncomment lines in the compose file to run [redis](../containers/redis.md), [varnish](../containers/varnish.md), phpmyadmin, etc
+8. Optional: macOS users please read [this](docker-for-mac.md)
+9. Optional: Windows users please read [this](permissions.md#windows)
+10. Run containers: `docker-compose up -d` or `make up` (see all [make commands](make-commands.md))
+11. That's it! Your WordPress website should be up and running at http://wp.docker.localhost:8000
+12. You can see status of your containers and their logs via portainer: http://portainer.wp.docker.localhost:8000
 
-You can stop containers by executing:
-```bash
-docker-compose stop
-```
+!!! info "Optional files":
+    If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS](docker-for-mac.md) feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4wordpress.tar.gz`
+
+You can stop containers by executing `docker-compose stop` or `make stop`
 
 Have a problem? Submit a new issue on [GitHub](https://github.com/wodby/docker4wordpress/issues) or ask [community on Slack](http://slack.wodby.com)
 
-!!! tip "Permissions issues":
-    To avoid potential problems with permissions between your host and containers please follow [these instructions](permissions.md)
-
-!!! info "For macOS users":
-    Docker for Mac volumes has poor performance. However there are workarounds, read more [here](docker-for-mac.md)
-
 Feel free to adjust volumes and ports in the compose file for your convenience. 
-
