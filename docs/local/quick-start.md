@@ -9,7 +9,7 @@ There are 2 options how to use docker4wordpress – you can either run [vanilla]
 
 1. Clone [docker4wordpress repository](https://github.com/wodby/docker4wordpress) and switch to the [latest stable tag](https://github.com/wodby/docker4wordpress/releases) or download/unpack the source code from the [latest release](https://github.com/wodby/docker4wordpress/releases)
 2. [Configure domains](domains.md)
-3. From project root directory run `docker-compose up -d` or `make up` to start containers 
+3. From project root directory run `docker-compose up -d` or `make up` to start containers. Give it 10-20 seconds to initialize after the start
 4. That's it! Proceed with WordPress installation at http://wp.docker.localhost:8000. Default database user, password and database name are all `wordpress`, database host is `mariadb`
 5. You can see status of your containers and their logs via portainer: http://portainer.wp.docker.localhost:8000
 
