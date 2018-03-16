@@ -1,6 +1,6 @@
 # Varnish
 
-You can configure Redis via environment variables that listed at https://github.com/wodby/wordpress-varnish. 
+You can configure Varnish via environment variables that listed at https://github.com/wodby/wordpress-varnish. 
 
 Integration:
 
