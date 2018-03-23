@@ -15,7 +15,7 @@ There are 2 options how to use docker4wordpress – you can either run [vanilla]
 
 ## Option 2. Mount my WordPress Codebase
 
-1. Download `docker4wordpress.tar.gz` from the [latest stable release](https://github.com/wodby/docker4wordpress/releases) and unpack to your WordPress project root
+1. Download `docker4wordpress.tar.gz` from the [latest stable release](https://github.com/wodby/docker4wordpress/releases) and unpack to your WordPress project root. If you clone the repository make sure you've deleted `docker-compose.override.yml` as it's used to deploy vanilla WordPress
 2. Ensure database credentials match in your `wp-config.php` and `.env` files 
 3. [Configure domains](domains.md)
 4. Optional: [import existing database](import-export.md)
