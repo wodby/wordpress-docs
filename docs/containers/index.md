@@ -27,7 +27,7 @@ The WordPress stack consist of the following containers:
 !!! note "Resources"
     Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://docs.wodby.com/stacks/configuration.html#resources
 
-!!! note "SSHD and Cron":
+!!! note "SSHD and Cron"
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Crond] services.
 
 ## Configuration

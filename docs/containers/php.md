@@ -32,7 +32,7 @@ Deprecated variables:
 | `$WODBY_APP_DOCROOT` | `$HTTP_ROOT`      |
 | `$WODBY_CONF`        | `$WODBY_DIR_CONF` |
 
-!!! info "Variables availability": 
+!!! info "Variables availability" 
     Environment variables provided by Wodby are always available in PHP even if `PHP_FPM_CLEAR_ENV` set to `no`. 
 
 ## XDebug
@@ -45,7 +45,7 @@ Follow these steps to debug your application instance remotely with [xdebug](htt
 4. Start debugging in IDE
 5. Start your browser debug helper plugin ([Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=en) or [Firefox](https://addons.mozilla.org/en-us/firefox/addon/the-easiest-xdebug)) and open the page you want to debug
 
-!!! info "Debugging locally": 
+!!! info "Debugging locally" 
     To learn how to use xdebug locally see [this article](../local/xdebug.md) 
 
 ## Redirects

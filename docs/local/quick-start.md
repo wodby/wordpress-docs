@@ -1,6 +1,6 @@
 # Quick start
 
-!!! danger "Persistence of database data":
+!!! danger "Persistence of database data"
     You will lose MariaDB / PostgreSQL data if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist. 
 
 There are 2 options how to use docker4wordpress – you can either run [vanilla](https://en.wikipedia.org/wiki/Vanilla_software) WordPress from the image or mount your own WordPress codebase:
@@ -26,7 +26,7 @@ There are 2 options how to use docker4wordpress – you can either run [vanilla]
 11. That's it! Your WordPress website should be up and running at http://wp.docker.localhost:8000
 12. You can see status of your containers and their logs via portainer: http://portainer.wp.docker.localhost:8000
 
-!!! info "Optional files":
+!!! info "Optional files"
     If you don't need to [run multiple projects](multiple-projects.md) and don't use [docker-sync to improve volumes performance on macOS](docker-for-mac.md) feel free to delete `traefik.yml` and `docker-sync.yml` that come with the `docker4wordpress.tar.gz`
 
 You can stop containers by executing `docker-compose stop` or `make stop`
