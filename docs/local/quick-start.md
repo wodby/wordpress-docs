@@ -1,8 +1,5 @@
 # Quick start
 
-!!! danger "Persistence of database data"
-    You will lose MariaDB / PostgreSQL data if you run `docker-compose down`. Instead use `docker-compose stop` to stop containers. Alternatively, you can use a manual volume for mariadb data (see compose file), this way your data will always persist. 
-
 There are 2 options how to use docker4wordpress – you can either run [vanilla](https://en.wikipedia.org/wiki/Vanilla_software) WordPress from the image or mount your own WordPress codebase:
 
 ## Option 1: Run Vanilla WordPress from Image
