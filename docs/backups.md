@@ -1,6 +1,6 @@
 # Backups
 
-This stack provides backup and restore actions for files (e.g. `wp-content/uploads`) and database. Learn more about backups from our [documentation](https://docs.wodby.com/apps/backups.html).
+This stack provides backup and restore actions for files (e.g. `wp-content/uploads`) and database. Learn more about backups from our [documentation](https://help.wodby.com/apps/backups).
 
 ## Database backups
 

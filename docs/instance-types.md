@@ -1,6 +1,6 @@
 # Instance types
 
-See https://docs.wodby.com/apps/instances.html to learn more about instances.
+See https://help.wodby.com/apps/instances to learn more about instances.
 
 ## Dev
 

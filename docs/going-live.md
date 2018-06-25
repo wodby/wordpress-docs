@@ -2,11 +2,11 @@
 
 Make sure you check the following points before you go live with Wodby:
 
-* [Auto backups](https://docs.wodby.com/apps/backups.html) enabled and launch time is set to a less visited time gap (usually 01-06 am) 
-* You have enough free disk space on your server considering your backups rotation period. You can always move Wodby's and applications'a data to an external volume, [see instructions](https://docs.wodby.com/infrastructure/volumes.html)
-* If you use [git deployment](https://docs.wodby.com/git/) workflow, it's recommended to use git tag instead of branch. If you prefer using branch, make sure auto deployment via git hooks is disabled
+* [Auto backups](https://help.wodby.com/apps/backups) enabled and launch time is set to a less visited time gap (usually 01-06 am) 
+* You have enough free disk space on your server considering your backups rotation period. You can always move Wodby's and applications'a data to an external volume, [see instructions](https://help.wodby.com/infrastructure/using-external-volumes-for-applications-data)
+* If you use [git deployment](https://help.wodby.com/git/) workflow, it's recommended to use git tag instead of branch. If you prefer using branch, make sure auto deployment via git hooks is disabled
 * You have a correct primary domain
-* Your custom domains have enabled [SSL](https://docs.wodby.com/apps/ssl.html)
+* Your custom domains have enabled [SSL](https://help.wodby.com/apps/ssl)
 * If you have SSL enabled on your domains, make sure you have HTTP to HTTPS redirect and HSTS enabled
 * Disable technical domains
 * Cron enabled

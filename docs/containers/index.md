@@ -6,13 +6,13 @@ The WordPress stack consist of the following containers:
 
 | Container    | Versions           | [Resources]      | Image                              |
 | ------------ | ------------------ | ---------------- | ---------------------------------- |
-| [Nginx]      | 1.13, 1.12         | 4m               | [wodby/wordpress-nginx]            |
+| [Nginx]      | 1.15, 1.14, 1.13   | 4m               | [wodby/wordpress-nginx]            |
 | [Apache]     | 2.4                | 4m               | [wodby/php-apache]                 |
-| [PHP-FPM]    | 7.x                | 32m              | [wodby/wordpress-php]              |
+| [PHP-FPM]    | 7.x, 5.6           | 32m              | [wodby/wordpress-php]              |
 | [SSHD]       | -//-               | 4m               | [wodby/wordpress-php]              |
 | [Crond]      | -//-               | 4m, 0.1; 512m, 1 | [wodby/wordpress-php]              |
-| [MariaDB]    | 10.2, 10.1         | 128m             | [wodby/mariadb]                    |
-| [PostgreSQL] | 10.1, 9.6          | 64m              | [wodby/postgres]                   |
+| [MariaDB]    | 10.3, 10.2, 10.1   | 128m             | [wodby/mariadb]                    |
+| [PostgreSQL] | 10, 9.x            | 64m              | [wodby/postgres]                   |
 | [Redis]      | 4.0, 3.2           | 4m               | [wodby/redis]                      |
 | [Varnish]    | 4.1                | 8m               | [wodby/wordpress-varnish]          |
 | [OpenSMTPD]  | 6.0                | 4m               | [wodby/opensmtpd]                  |
@@ -25,14 +25,14 @@ The WordPress stack consist of the following containers:
 | phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "Resources"
-    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://docs.wodby.com/stacks/configuration.html#resources
+    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://help.wodby.com/stacks/stack-configuration#resources
 
 !!! note "SSHD and Cron"
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Crond] services.
 
 ## Configuration
 
-Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://docs.wodby.com/stacks/configuration.html  
+Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://help.wodby.com/stacks/stack-configuration  
 
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md
