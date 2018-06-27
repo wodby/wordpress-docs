@@ -25,14 +25,14 @@ The WordPress stack consist of the following containers:
 | phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
 !!! note "Resources"
-    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://help.wodby.com/stacks/stack-configuration#resources
+    Default values specified. `4m, 0.1; 512m, 1` means 4m RAM and 0.1 CPU requests; 512m RAM and 1 CPU limits. For more details visit https://help.wodby.com/stacks/configuration#resources
 
 !!! note "SSHD and Cron"
     For Wodby environments we additionally spin up copies of PHP services with overridden commands to run cron and ssh daemons. All environment variables added to PHP service will be automatically passed to [SSHD] and [Crond] services.
 
 ## Configuration
 
-Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://help.wodby.com/stacks/stack-configuration  
+Every container provides a set of environment variables for its customization. You can add and edit environment variables of a service from `[Instance] > Stack` page. For more details see https://help.wodby.com/stacks/configuration  
 
 [Apache]: apache.md
 [AthenaPDF]: athenapdf.md
