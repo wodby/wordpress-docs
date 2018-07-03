@@ -17,6 +17,8 @@
 | PhpMyAdmin | [phpMyAdmin](https://www.phpmyadmin.net/) is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. |
 | Adminer | [Adminer](https://www.adminer.org/) is a simplified alternative to PhpMyAdmin. |
 
+To see all available containers in Wodby stack see [here](containers/index.md), to see all containers available for local environment see [here](local/index.md) 
+
 [Apache]: containers/apache.md
 [AthenaPDF]: containers/athenapdf.md
 [Blackfire]: containers/blackfire.md
