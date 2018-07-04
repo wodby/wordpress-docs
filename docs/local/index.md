@@ -10,14 +10,14 @@ The WordPress stack consist of the following containers:
 
 | Container     | Versions           | Service name    | Image                              |
 | ------------- | ------------------ | --------------- | ---------------------------------- |
-| [Nginx]       | 1.15, 1.14, 1.13   | `nginx`         | [wodby/php-nginx]                  |
+| [Nginx]       | 1.15, 1.14, 1.13   | `nginx`         | [wodby/wordpress-nginx]            |
 | [Apache]      | 2.4                | `apache`        | [wodby/php-apache]                 |
 | [PHP]         | 7.x, 5.6           | `php`           | [wodby/wordpress-php]              |
 | [MariaDB]     | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    |
 | [PostgreSQL]  | 10, 9.x            | `postgres`      | [wodby/postgres]                   |
 | [Redis]       | 4.0, 3.2           | `redis`         | [wodby/redis]                      |
 | [Node.js]     | 9.11, 8.11, 6.14   | `node`          | [wodby/node]                       |
-| [Varnish]     | 4.1                | `varnish`       | [wodby/varnish]                    |
+| [Varnish]     | 4.1                | `varnish`       | [wodby/wordpress-varnish]          |
 | [Solr]        | 7.x, 6.x, 5.5, 5.4 | `solr`          | [wodby/solr]                       |
 | Elasticsearch | 6.x, 5.6, 5.5, 5.4 | `elasticsearch` | [wodby/elasticsearch]              |
 | Kibana        | 6.x, 5.6, 5.5, 5.4 | `kibana`        | [wodby/kibana]                     |
@@ -56,6 +56,7 @@ The WordPress stack consist of the following containers:
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 [portainer/portainer]: https://hub.docker.com/r/portainer/portainer
+[wodby/adminer]: https://github.com/wodby/adminer
 [wodby/elasticsearch]: https://github.com/wodby/elasticsearch
 [wodby/kibana]: https://github.com/wodby/kibana
 [wodby/mariadb]: https://github.com/wodby/mariadb
