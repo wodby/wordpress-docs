@@ -12,7 +12,7 @@ The WordPress stack consist of the following containers:
 | ------------- | ------------------ | --------------- | ---------------------------------- |
 | [Nginx]       | 1.15, 1.14, 1.13   | `nginx`         | [wodby/php-nginx]                  |
 | [Apache]      | 2.4                | `apache`        | [wodby/php-apache]                 |
-| [PHP]         | 7.x, 5.6           | `php`           | [wodby/php]                        |
+| [PHP]         | 7.x, 5.6           | `php`           | [wodby/wordpress-php]              |
 | [MariaDB]     | 10.3, 10.2, 10.1   | `mariadb`       | [wodby/mariadb]                    |
 | [PostgreSQL]  | 10, 9.x            | `postgres`      | [wodby/postgres]                   |
 | [Redis]       | 4.0, 3.2           | `redis`         | [wodby/redis]                      |
@@ -55,11 +55,18 @@ The WordPress stack consist of the following containers:
 [blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
-[portainer/portainer]: https://hub.docker.com/portainer/portainer
+[portainer/portainer]: https://hub.docker.com/r/portainer/portainer
+[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
+[wodby/kibana]: https://github.com/wodby/kibana
 [wodby/mariadb]: https://github.com/wodby/mariadb
+[wodby/memcached]: https://github.com/wodby/memcached
+[wodby/node]: https://github.com/wodby/node
+[wodby/opensmtpd]: https://github.com/wodby/opensmtpd
 [wodby/php-apache]: https://github.com/wodby/php-apache
 [wodby/postgres]: https://github.com/wodby/postgres
 [wodby/redis]: https://github.com/wodby/redis
+[wodby/rsyslog]: https://github.com/wodby/rsyslog
+[wodby/solr]: https://github.com/wodby/solr
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
 [wodby/wordpress-nginx]: https://github.com/wodby/wordpress-nginx
 [wodby/wordpress-php]: https://github.com/wodby/wordpress-php

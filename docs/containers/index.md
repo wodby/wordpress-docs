@@ -55,21 +55,23 @@ Every container provides a set of environment variables for its customization. Y
 [Varnish]: varnish.md
 [Webgrind]: webgrind.md
 
-[_/node]: https://hub.docker.com/_/node
 [_/traefik]: https://hub.docker.com/_/traefik
 [arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
 [blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
 [mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
 [phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
-[portainer/portainer]: https://hub.docker.com/portainer/portainer
-[wodby/adminer]: https://hub.docker.com/r/wodby/adminer
+[portainer/portainer]: https://hub.docker.com/r/portainer/portainer
+[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
+[wodby/kibana]: https://github.com/wodby/kibana
 [wodby/mariadb]: https://github.com/wodby/mariadb
 [wodby/memcached]: https://github.com/wodby/memcached
+[wodby/node]: https://github.com/wodby/node
 [wodby/opensmtpd]: https://github.com/wodby/opensmtpd
 [wodby/php-apache]: https://github.com/wodby/php-apache
 [wodby/postgres]: https://github.com/wodby/postgres
 [wodby/redis]: https://github.com/wodby/redis
-[wodby/rsyslog]: https://hub.docker.com/r/wodby/rsyslog
+[wodby/rsyslog]: https://github.com/wodby/rsyslog
+[wodby/solr]: https://github.com/wodby/solr
 [wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
 [wodby/wordpress-nginx]: https://github.com/wodby/wordpress-nginx
 [wodby/wordpress-php]: https://github.com/wodby/wordpress-php
