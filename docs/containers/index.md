@@ -23,7 +23,7 @@ The WordPress stack consist of the following containers:
 | [SSHD]       | -                  | 4m               | [wodby/wordpress-php]              |
 | [Varnish]    | 4.1                | 8m               | [wodby/wordpress-varnish]          |
 | [Webgrind]   | 1.5                | 16m              | [wodby/webgrind]                   |
-| Adminer      | 4.3                | 8m               | [wodby/adminer]                    |
+| Adminer      | 4.6                | 8m               | [wodby/adminer]                    |
 | Mailhog      | latest             | 4m               | [mailhog/mailhog]                  |
 | phpMyAdmin   | latest             | 32m              | [phpmyadmin/phpmyadmin]            |
 
